@@ -63,7 +63,15 @@ ollama pull gemma3
 ```
 
 ### 3. Get the dataset
-The dataset is **not included** in this repo. It uses the IN-Abs, IN-Ext and UK-Abs legal summarization datasets (Shukla et al., *Legal Case Document Summarization*, AACL-IJCNLP 2022). Download them and place them so that you have:
+The dataset is **not included** in this repo because of its size (about 313 MB unpacked). It uses the **IN-Abs, IN-Ext and UK-Abs** legal case summarization datasets:
+
+| Dataset | Content |
+|---|---|
+| IN-Abs | Indian Supreme Court judgments + abstractive summaries (7,030 train / 100 test) |
+| IN-Ext | Indian Supreme Court judgments + extractive summaries by law experts (50 test) |
+| UK-Abs | UK Supreme Court judgments + press summaries (693 train / 100 test) |
+
+**Download:** [`dataset.zip` from Zenodo (record 7152317, 97.8 MB)](https://zenodo.org/records/7152317). It's licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Then unzip it so that you have:
 ```
 dataset/
 ├── IN-Abs/
@@ -135,4 +143,8 @@ python -m pytest tests/integration  # end-to-end scripts (need Ollama running)
 - [STEPS.md](STEPS.md): fine-tuning and deployment steps
 
 ## 📄 License
-[MIT](LICENSE)
+Code: [MIT](LICENSE).
+
+The dataset is **not** covered by this license. It's © its authors and released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). If you use it, please cite:
+
+> Abhay Shukla, Paheli Bhattacharya, Soham Poddar, Rajdeep Mukherjee, Kripabandhu Ghosh, Pawan Goyal, Saptarshi Ghosh. *Legal Case Document Summarization: Extractive and Abstractive Methods and their Evaluation.* AACL-IJCNLP 2022. [arXiv:2210.07544](https://arxiv.org/abs/2210.07544) · [Dataset (Zenodo)](https://zenodo.org/records/7152317)
