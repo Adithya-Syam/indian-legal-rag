@@ -1,0 +1,24 @@
+# Runtime dependencies for the web app, RAG and tests.
+# The LLM runs in Ollama (https://ollama.com), so no GPU is needed.
+# Fine-tuning extras: see requirements-train.txt
+
+# RAG / embeddings
+sentence-transformers>=2.2.2,<6
+faiss-cpu>=1.7.4,<2
+langchain-core>=0.2,<2
+langchain-text-splitters>=0.2,<2
+
+# NLP + evaluation
+numpy>=1.24,<3
+pandas>=2.0,<4
+scikit-learn>=1.3,<2
+nltk>=3.8.1,<4
+rouge-score>=0.1.2,<0.2
+
+# Web app + LLM backend (Ollama over HTTP)
+streamlit>=1.28,<2
+requests>=2.31,<3
+pyyaml>=6.0,<7
+
+# Testing
+pytest>=7.4,<9
